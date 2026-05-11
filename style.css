@@ -634,7 +634,8 @@ h4 {
 
 .visual-evidence {
     margin-top: 30px;
-    max-width: 500px;
+    max-width: 800px; /* Increased from 500px for a more heroic scale */
+    width: 95%;
 }
 
 .db-preview-img {
