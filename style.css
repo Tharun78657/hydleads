@@ -1442,50 +1442,111 @@ h4 {
         bottom: 0;
         left: 0;
         width: 100%;
-        background: #fff;
-        padding: 12px 20px;
-        box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.1);
+        background: #0f172a; /* Premium Dark Navy */
+        padding: 10px 15px;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
         z-index: 9999;
         justify-content: space-between;
         align-items: center;
-        border-top: 1px solid #eee;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
     }
 
-    .smb-price {
+    .smb-timer-block {
         display: flex;
         flex-direction: column;
+        gap: 4px;
     }
 
-    .smb-old {
+    .smb-timer-label {
         font-size: 11px;
-        text-decoration: line-through;
-        color: var(--dim);
+        font-weight: 700;
+        color: #94a3b8;
     }
 
-    .smb-new {
+    .smb-timer-display {
+        display: flex;
+        gap: 12px;
+    }
+
+    .timer-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timer-unit span {
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: #fbbf24; /* Vibrant Timer Yellow */
+        line-height: 1;
+    }
+
+    .timer-unit small {
+        font-size: 9px;
         font-weight: 800;
-        color: var(--txt);
-        font-size: 1.2rem;
-    }
-
-    .smb-off {
-        color: #27ae60;
-        font-size: 11px;
-        font-weight: 900;
-    }
-
-    .smb-btn {
-        background: #ff7675;
+        text-transform: uppercase;
         color: #fff;
-        text-decoration: none;
-        padding: 12px 24px;
-        border-radius: 12px;
-        font-weight: 900;
-        font-size: 0.9rem;
+        margin-top: 2px;
+    }
+
+    .smb-action-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+
+    .smb-offer-row {
         display: flex;
         align-items: center;
         gap: 8px;
-        box-shadow: 0 4px 15px rgba(255, 118, 117, 0.3);
+    }
+
+    .smb-old-price {
+        font-size: 12px;
+        text-decoration: line-through;
+        color: #94a3b8;
+    }
+
+    .smb-new-price {
+        font-weight: 900;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+
+    .smb-off-tag {
+        color: #2ecc71; /* High-contrast emerald green */
+        font-size: 10px;
+        font-weight: 900;
+        background: rgba(46, 204, 113, 0.15);
+        padding: 2px 6px;
+        border-radius: 4px;
+    }
+
+    .smb-btn-urgency {
+        background: linear-gradient(135deg, #ff4757, #ff6b81);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 12px;
+        font-weight: 900;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        animation: pulseButton 1.5s infinite;
+    }
+
+    @keyframes pulseButton {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.03); }
+        100% { transform: scale(1); }
+    }
+
+    .smb-scarcity {
+        font-size: 9px;
+        font-weight: 700;
+        color: #94a3b8;
     }
 
     .main-title span {

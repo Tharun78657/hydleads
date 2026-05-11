@@ -172,3 +172,37 @@ if (dashboard) {
         dashboard.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
     });
 }
+
+/* ============= MOBILE URGENCY TIMER ============= */
+function startMobileUrgencyTimer() {
+    const minsEl = document.getElementById('smb-mins');
+    const secsEl = document.getElementById('smb-secs');
+    
+    if (!minsEl || !secsEl) return;
+
+    let timeLeft = 3600; // 60 Minutes (1 Hour) in seconds
+
+    const updateTimer = () => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+
+        minsEl.textContent = minutes.toString().padStart(2, '0');
+        secsEl.textContent = seconds.toString().padStart(2, '0');
+
+        if (timeLeft <= 0) {
+            timeLeft = 600; // Reset for infinite urgency effect
+        } else {
+            timeLeft--;
+        }
+    };
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+}
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', startMobileUrgencyTimer);
+// Fallback if DOMContentLoaded already fired
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    startMobileUrgencyTimer();
+}
