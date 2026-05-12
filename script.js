@@ -180,7 +180,7 @@ function startMobileUrgencyTimer() {
     
     if (!minsEl || !secsEl) return;
 
-    let timeLeft = 3600; // 60 Minutes (1 Hour) in seconds
+    let timeLeft = 1200; // 20 Minutes in seconds
 
     const updateTimer = () => {
         const minutes = Math.floor(timeLeft / 60);
