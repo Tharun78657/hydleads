@@ -461,13 +461,13 @@ h4 {
 }
 
 .nav-logo-img {
-    height: 42px;
+    height: 72px;
     width: auto;
     object-fit: contain;
 }
 
 .footer-logo-img {
-    height: 48px;
+    height: 80px;
     width: auto;
     object-fit: contain;
 }
