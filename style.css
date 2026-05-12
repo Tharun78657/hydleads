@@ -456,7 +456,20 @@ h4 {
     font-size: 1.6rem;
     font-weight: 900;
     font-family: var(--heading);
-    color: var(--txt)
+    color: var(--txt);
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-bolt {
@@ -1824,7 +1837,7 @@ h4 {
 
 .proof-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem
 }
 
